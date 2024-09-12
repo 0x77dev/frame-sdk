@@ -1,0 +1,41 @@
+{
+  "name": "frame-sdk",
+  "module": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "tsconfig.json",
+    "package.json"
+  ],
+  "resolutions": {
+    "typescript": "5.5.4"
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "lint": "eslint --cache --fix",
+    "test": "bun run lint && bun test",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^9.10.0",
+    "@types/bun": "latest",
+    "bun-plugin-dts": "^0.2.3",
+    "eslint": "^9.10.0",
+    "eslint-config-standard": "^17.1.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "typescript-eslint": "^8.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "5.5.4"
+  },
+  "lint-staged": {
+    "*.ts": "bun run lint"
+  }
+}
