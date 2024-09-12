@@ -33,10 +33,9 @@
   "module": "dist/index.js",
   "name": "frame-sdk",
   "peerDependencies": {
-    "typescript": "5.5.4"
-  },
-  "resolutions": {
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "@abandonware/noble": "1.9.2-25",
+    "webbluetooth": "3.2.1"
   },
   "scripts": {
     "build": "bun run build.ts",
@@ -45,7 +44,9 @@
     "test": "bun run lint"
   },
   "trustedDependencies": [
-    "esbuild"
+    "@abandonware/noble",
+    "esbuild",
+    "usb"
   ],
   "type": "module",
   "types": "dist/index.d.ts",

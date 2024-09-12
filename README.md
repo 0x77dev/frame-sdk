@@ -1,8 +1,15 @@
 # frame-sdk
 
+![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg) 
+
 Unofficial JavaScript / [Web Bluetooth](https://github.com/WebBluetoothCG/web-bluetooth) SDK for [Brilliant Labs Frame](https://docs.brilliant.xyz/frame/building-apps) with support for Browser and Node.js.
 
 _(Work in progress for React Native support)_
+
+## Examples
+
+- [Node.js / Bun](./example/node/index.ts)
+- [Browser](./example/vite/src/main.ts)
 
 ## Usage
 
@@ -10,10 +17,18 @@ _(Work in progress for React Native support)_
 
 ```ts
 import { Frame } from "frame-sdk";
-import { WebBluetoothTransport } from "frame-sdk/transport/web-bluetooth";
+
+const frame = new Frame();
+```
+
+Or using a custom Bluetooth implementation:
+
+```ts
+import { Frame } from "frame-sdk";
+import { NobleTransport } from "frame-sdk/dist/transport/noble";
 
 const frame = new Frame({
-  transport: new WebBluetoothTransport(),
+  transport: new NobleTransport(),
 });
 ```
 

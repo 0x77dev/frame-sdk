@@ -3,10 +3,14 @@
   "module": "index.js",
   "type": "module",
   "dependencies": {
-    "frame-sdk": "file:../.."
+    "frame-sdk": "file:../../"
+  },
+  "scripts": {
+    "start": "esrun index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "esrun": "^3.2.26",
     "webbluetooth": "^3.2.1"
   },
   "peerDependencies": {
