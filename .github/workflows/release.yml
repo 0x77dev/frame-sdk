@@ -1,8 +1,7 @@
 name: Release
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 permissions:
   contents: read
@@ -43,17 +42,6 @@ jobs:
       - name: Release to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
-
-      - name: Setup Node.js for GitHub Packages
-        uses: actions/setup-node@v3
-        with:
-          node-version: "lts/*"
-          registry-url: "https://npm.pkg.github.com"
-
-      - name: Release to GitHub Packages
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm publish --access public
 
       - name: Semantic Release
