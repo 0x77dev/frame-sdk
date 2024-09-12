@@ -14,6 +14,5 @@ await Bun.build({
   external: ['@abandonware/noble', 'webbluetooth'],
   packages: 'external',
   sourcemap: 'linked',
-  target: 'node',
   plugins: [dts()]
 })
