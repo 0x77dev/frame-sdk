@@ -1,5 +1,5 @@
-import { Frame } from 'frame-sdk'
-import { NobleTransport } from 'frame-sdk/dist/transport/noble'
+import { Frame } from '@0x77/frame-sdk'
+import { NobleTransport } from '@0x77/frame-sdk/dist/transport/noble'
 
 const frame = new Frame({
   transport: new NobleTransport()

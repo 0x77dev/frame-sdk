@@ -31,7 +31,7 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "name": "frame-sdk",
+  "name": "@0x77/frame-sdk",
   "peerDependencies": {
     "typescript": "5.5.4",
     "@abandonware/noble": "1.9.2-25",

@@ -3,7 +3,7 @@
   "module": "index.js",
   "type": "module",
   "dependencies": {
-    "frame-sdk": "file:../../"
+    "@0x77/frame-sdk": "file:../../"
   },
   "scripts": {
     "start": "esrun index.ts"

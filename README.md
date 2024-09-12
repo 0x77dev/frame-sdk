@@ -1,6 +1,6 @@
 # frame-sdk
 
-[![npm](https://img.shields.io/npm/v/frame-sdk.svg)](https://www.npmjs.com/package/frame-sdk)
+[![npm](https://img.shields.io/npm/v/@0x77/frame-sdk.svg)](https://www.npmjs.com/package/@0x77/frame-sdk)
 
 ![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
@@ -18,7 +18,7 @@ _(Work in progress for React Native support)_
 ### Initialize
 
 ```ts
-import { Frame } from "frame-sdk";
+import { Frame } from "@0x77/frame-sdk";
 
 const frame = new Frame();
 ```
@@ -26,8 +26,8 @@ const frame = new Frame();
 Or using a custom Bluetooth implementation:
 
 ```ts
-import { Frame } from "frame-sdk";
-import { NobleTransport } from "frame-sdk/dist/transport/noble";
+import { Frame } from "@0x77/frame-sdk";
+import { NobleTransport } from "@0x77/frame-sdk/dist/transport/noble";
 
 const frame = new Frame({
   transport: new NobleTransport(),
