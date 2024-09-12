@@ -1,5 +1,7 @@
 # frame-sdk
 
+[![npm](https://img.shields.io/npm/v/frame-sdk.svg)](https://www.npmjs.com/package/frame-sdk)
+
 ![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
 JavaScript SDK for [Brilliant Labs Frame](https://docs.brilliant.xyz/frame/building-apps) with support for Browser and Node.js
