@@ -1,9 +1,13 @@
 {
   "name": "frame-sdk",
-  "module": "index.ts",
+  "version": "0.0.0",
+  "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "workspaces": [
+    "example/*"
+  ],
   "files": [
     "dist",
     "README.md",
@@ -17,13 +21,15 @@
   "scripts": {
     "build": "bun run build.ts",
     "lint": "eslint --cache --fix",
-    "test": "bun run lint && bun test",
+    "test": "bun run lint",
     "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.10.0",
     "@types/bun": "latest",
+    "@types/debug": "^4.1.12",
+    "@types/web-bluetooth": "^0.0.20",
     "bun-plugin-dts": "^0.2.3",
     "eslint": "^9.10.0",
     "eslint-config-standard": "^17.1.0",
@@ -37,5 +43,12 @@
   },
   "lint-staged": {
     "*.ts": "bun run lint"
+  },
+  "trustedDependencies": [
+    "esbuild"
+  ],
+  "dependencies": {
+    "debug": "^4.3.7",
+    "strongly-typed-events": "^3.0.11"
   }
 }

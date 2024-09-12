@@ -12,7 +12,10 @@ export default [
       extends: ['standard']
     })
   ),
-  { files: ['**/*.{js,mjs,cjs,ts}'], ignores: ['dist/*', 'node_modules/*'] },
+  {
+    files: ['**/*.{js,mjs,cjs,ts}'],
+    ignores: ['dist', 'node_modules/*', 'example/*']
+  },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended
