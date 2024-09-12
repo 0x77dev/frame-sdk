@@ -1,8 +1,8 @@
 # frame-sdk
 
-![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg) 
+![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
-Unofficial JavaScript / [Web Bluetooth](https://github.com/WebBluetoothCG/web-bluetooth) SDK for [Brilliant Labs Frame](https://docs.brilliant.xyz/frame/building-apps) with support for Browser and Node.js.
+JavaScript SDK for [Brilliant Labs Frame](https://docs.brilliant.xyz/frame/building-apps) with support for Browser and Node.js
 
 _(Work in progress for React Native support)_
 
