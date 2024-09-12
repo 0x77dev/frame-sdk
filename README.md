@@ -10,8 +10,11 @@ _(Work in progress for React Native support)_
 
 ```ts
 import { Frame } from "frame-sdk";
+import { WebBluetoothTransport } from "frame-sdk/transport/web-bluetooth";
 
-const frame = new Frame();
+const frame = new Frame({
+  transport: new WebBluetoothTransport(),
+});
 ```
 
 ### Connect
@@ -26,10 +29,17 @@ await frame.connect();
 await frame.disconnect();
 ```
 
+### Display Text
+
+```ts
+await frame.display.text({ text: "hello world" });
+await frame.display.show();
+```
+
 ### Receive Data
 
 ```ts
-frame.onData.subscribe((data) => {
+frame.onData.subscribe((data: string) => {
   console.log(data);
 });
 ```
@@ -37,28 +47,5 @@ frame.onData.subscribe((data) => {
 ### Send Lua Code
 
 ```ts
-await frame.eval("print('Hello, World!')");
+await frame.sendData("print('Hello, World!')");
 ```
-
-## Examples
-
-### Vite
-
-Look into [example/vite](./example/vite) for a full example.
-
-### Node.js
-
-```ts
-import { Frame } from "frame-sdk";
-import { Bluetooth } from "webbluetooth";
-
-const frame = new Frame({
-  bluetooth: Bluetooth,
-});
-```
-
-Look into [example/node](./example/node) for a full example.
-
-### React Native
-
-Work in progress, not a priority since React Native doesn't support Web Bluetooth natively, bu there is [react-native-ble-manager](https://innoveit.github.io/react-native-ble-manager) that has been used by [Neurosity for their RN SDK](https://docs.neurosity.co/docs/api/bluetooth-react-native/).
